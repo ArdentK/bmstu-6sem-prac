@@ -3,7 +3,9 @@ from algos.LIHP import LIHP
 from algos.FIHP import FIHP
 from algos.RW import RW
 from algos.interv import interv
+from algos.modif import modifInterv
 from utils.gaph import *
+
 from copy import copy
 import numpy as np
 
@@ -25,9 +27,10 @@ example = np.array([[0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
 
 data = loadData("./data/massbig1.mat")
 newdata = copy(data)
-res = interv(data)
+res = modifInterv(example)
+print(res)
 
-exportData(res, "./res/interv/massbig1.txt")
+# exportData(res, "./res/interv/massbig1.txt")
 
-# hist(res)
-compareGraph(newdata, res)
+hist(res)
+# compareGraph(newdata, res)
