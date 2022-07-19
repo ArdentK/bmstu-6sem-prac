@@ -1,4 +1,5 @@
-# Алгоритм принятия решения с учетом всего интервала планирования
+# Алгоритм принятия решения с учетом всего интервала планирования 
+# c учетом весов
 
 # Преимущества данного алгоритма заключаются в том, 
 # что обеспечивается выравнивание времени наблюдения каждого КА и 
@@ -8,7 +9,6 @@ import numpy as np
 from copy import copy
 
 
-N = 4
 PRIORNUM = 3
 
 def findVisibles(data, j):
@@ -97,7 +97,7 @@ def modifInterv(data):
     #       Если потенциальное время наблюдения спутника больше среднего времени наблюдения спутника, 
     #       то алгоритм переходит к шагу 5;
     for p in range(PRIORNUM, 0, -1):
-        for i in range(N):
+        for i in range(len(data)):
             if tPot[i][0] <= tM[p-1] and tPot[i][2] == p:
                 res, newData = AddInterv(newData, int(tPot[i][1]-1), res)
                 # print(newData)

@@ -27,10 +27,10 @@ example = np.array([[0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1],
 
 data = loadData("./data/massbig1.mat")
 newdata = copy(data)
-res = modifInterv(example)
+res = modifInterv(data)
 print(res)
 
 # exportData(res, "./res/interv/massbig1.txt")
 
-hist(res)
-# compareGraph(newdata, res)
+# hist(res)
+compareGraph(newdata, res)
