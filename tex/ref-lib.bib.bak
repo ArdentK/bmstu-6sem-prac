@@ -1,0 +1,18 @@
+% Encoding: UTF-8
+
+@Misc{about,
+  title = {ПАО «МАК «Вымпел»},
+  url   = {https://macvympel.ru/about/},
+}
+
+@Article{Фатеев2014,
+  author  = {В. Ф. Фатеев, В. Д. Шилин, А. А. Курикша},
+  journal = {Вопросы радиоэлектроники},
+  title   = {Направления развития космического эшелона информационных средств ВКО РФ на основе новых технологий},
+  year    = {2014},
+  number  = {1},
+  pages   = {5-25},
+  volume  = {2},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
